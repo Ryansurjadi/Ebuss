@@ -22,7 +22,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -47,7 +47,7 @@
 		<style>img [src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com" ] {disable :none ;}
 		</style>
 	<div class="fh5co-loader"></div>
-	
+
 
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
@@ -67,7 +67,7 @@
 						</ul>
 					</div>
 				</div>
-				
+
 			</div>
 		<!-- </div> -->
 	</nav>
@@ -94,8 +94,8 @@
 				<div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
 					<img src="images/hero_1.jpeg" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 				</div>
-				
-				
+
+
 				<div class="col-md-5 col-md-push-1 animate-box">
 					<div class="section-heading">
 						<h2>Ups Normal Cafe & Restaurant</h2>
@@ -111,7 +111,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Today's Menu</h2>
+					<h2>Best Seller Menu</h2>
 					<div class="row">
 						<div class="col-md-6">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
@@ -119,7 +119,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 					<div class="fh5co-item">
 						<img src="images/gallery_9.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
@@ -156,7 +156,7 @@
 			</div>
 		</div>
 	</div>
-				
+
 
 	<div id="fh5co-slider" class="fh5co-section animate-box">
 		<div class="container">
@@ -218,7 +218,7 @@
 						   			</div>
 						   		</div>
 					   		</div>
-					   	</li>		   	
+					   	</li>
 					  	</ul>
 				  	</div>
 				</aside>
@@ -226,7 +226,7 @@
 			</div>
 		</div>
 	</div>
-		
+
 			<div id="fh5co-blog" class="fh5co-section">
 				<div class="container">
 					<div class="row animate-box">
@@ -247,7 +247,7 @@
 										<li><i class="icon-heart2"></i>1.2K</li>
 										<li><i class="icon-eye2"></i>2K</li>
 									</ul>
-								</div> 
+								</div>
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -261,7 +261,7 @@
 										<li><i class="icon-heart2"></i>1.2K</li>
 										<li><i class="icon-eye2"></i>2K</li>
 									</ul>
-								</div> 
+								</div>
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -275,13 +275,13 @@
 										<li><i class="icon-heart2"></i>7.2K</li>
 										<li><i class="icon-eye2"></i>2K</li>
 									</ul>
-								</div> 
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		
+
 
 			<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -306,7 +306,7 @@
 					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
 				</div>
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
-					
+
 				</div>
 
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
@@ -328,7 +328,7 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
 						<small class="block">Designed by Smart Tech</a></small>
 					</p>
 					<p>
@@ -349,7 +349,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -367,4 +367,3 @@
 
 	</body>
 </html>
-
