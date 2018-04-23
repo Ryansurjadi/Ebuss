@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2018 at 04:21 PM
+-- Generation Time: Apr 23, 2018 at 08:42 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -39,16 +39,7 @@ CREATE TABLE `meja` (
 --
 
 INSERT INTO `meja` (`ID_meja`, `Jumlah_kursi`, `Status`) VALUES
-('1', 2, 'Available'),
-('10', 2, 'Available'),
-('2', 4, 'Available'),
-('3', 6, 'Available'),
-('4', 8, 'Available'),
-('5', 2, 'Available'),
-('6', 4, 'Available'),
-('7', 6, 'Available'),
-('8', 8, 'Available'),
-('9', 2, 'Available');
+('1', 2, 'ada');
 
 -- --------------------------------------------------------
 
@@ -58,11 +49,18 @@ INSERT INTO `meja` (`ID_meja`, `Jumlah_kursi`, `Status`) VALUES
 
 CREATE TABLE `reservasi` (
   `ID_reservasi` varchar(5) NOT NULL,
-  `ID_user` varchar(5) NOT NULL,
+  `ID_user` int(5) NOT NULL,
   `ID_meja` varchar(5) NOT NULL,
   `Tanggal_reservasi` date NOT NULL,
   `Jam_reservasi` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reservasi`
+--
+
+INSERT INTO `reservasi` (`ID_reservasi`, `ID_user`, `ID_meja`, `Tanggal_reservasi`, `Jam_reservasi`) VALUES
+('1', 1, '1', '2018-04-10', '10:16:37');
 
 -- --------------------------------------------------------
 
@@ -83,9 +81,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID_user`, `Nama_user`, `Email_user`, `NoHp_user`, `Password`) VALUES
-(19, 'Juni Handoko', 'junihandoko9@yahoo.com', '12121', '123'),
-(20, 'ryan', 'ryan@gmail.com', '08999123123', '123'),
-(21, 'Juni Handoko', 'junihandoko97@yahoo.com', '082184755697', '12345');
+(1, 'juni', 'junihandoko97@yahoo.com', '082184775697', '12345');
 
 --
 -- Indexes for dumped tables
@@ -101,7 +97,9 @@ ALTER TABLE `meja`
 -- Indexes for table `reservasi`
 --
 ALTER TABLE `reservasi`
-  ADD PRIMARY KEY (`ID_reservasi`);
+  ADD PRIMARY KEY (`ID_reservasi`),
+  ADD KEY `meja_reservasi_fk` (`ID_meja`),
+  ADD KEY `user_reservasi_fk` (`ID_user`);
 
 --
 -- Indexes for table `user`
@@ -117,7 +115,18 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;COMMIT;
+  MODIFY `ID_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `reservasi`
+--
+ALTER TABLE `reservasi`
+  ADD CONSTRAINT `meja_reservasi_fk` FOREIGN KEY (`ID_meja`) REFERENCES `meja` (`ID_meja`),
+  ADD CONSTRAINT `user_reservasi_fk` FOREIGN KEY (`ID_user`) REFERENCES `user` (`ID_user`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
