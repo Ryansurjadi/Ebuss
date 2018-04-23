@@ -106,16 +106,15 @@
 			</thead>
 
 			<tbody class="points_table_scrollbar">
-				
 				<?php
 					require('koneksi.php');
 					$i=1;
-					$query = "SELECT r.Tanggal_reservasi || ' ' || r.Jam_reservasi, m.Jumlah_kursi FROM `user` u JOIN `reservasi` r ON u.ID_user = r.ID_user JOIN `meja` m ON r.ID_meja = m.ID_meja WHERE u.Nama_user='ryan'";
+					$query = "SELECT CONCAT(r.Tanggal_reservasi, '  ', r.Jam_reservasi), m.Jumlah_kursi FROM `user` u JOIN `reservasi` r ON u.ID_user = r.ID_user JOIN `meja` m ON r.ID_meja = m.ID_meja WHERE u.Nama_user='juni'";
 					$result = mysqli_query($con,$query) or die(mysqli_error());
 				
 				if(mysqli_num_rows($result)==0 ){ ?>
 					<tr class = "odd">
-						<td class="empty"> <?php echo "Data tidak di temukan!"; ?> </td>
+						<td class="col-xs-3"> <?php echo "Data tidak di temukan!"; ?> </td>
 					</tr>
 				
 				<?php }
