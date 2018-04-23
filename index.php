@@ -63,7 +63,8 @@
 							<li class="nav-item active"><a class="nav-link js-scroll-trigger" href="/ebuss/index.php">Home</a></li>
 							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/reservation.php">Reservation</a></li>
 							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/about.php">About</a></li>
-							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/index.php">Rating</a></li>
+							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/history.php">History</a></li>
+							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/testimoni.php">Testimony</a></li>
 						</ul>
 					</div>
 				</div>
@@ -292,7 +293,7 @@
 					<p>Making a reservation at Ups Normal Cafe & Restaurant is easy and takes just a couple of minutes.
 					All you have to do is input your name,input number of visitor and the date and time you require.
 					Please contact the restaurant directly as they may be able to assist. We look forward to welcoming you soon.</p>
-					<p><a href="reservation.html" class="btn btn-primary btn-outline">Book Now</a></p>
+					<p><a href="reservation.php" class="btn btn-primary btn-outline">Book Now</a></p>
 				</div>
 			</div>
 		</div>

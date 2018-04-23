@@ -66,10 +66,10 @@
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-							<li class="active"><a href="reservation.php">Reservation</a></li>
+							<li><a href="reservation.php">Reservation</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="history.php">History</a></li>
-							<li><a href="testimoni.php">Testimony</a></li>
+							<li class="active"><a href="testimoni.php">Testimony</a></li>
 						</ul>
 					</div>
 				</div>
