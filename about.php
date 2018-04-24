@@ -71,11 +71,29 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="index.php">Home</a></li>
 							<li><a href="reservation.php">Reservation</a></li>
 							<li class="active"><a href="about.php">About</a></li>
-							<li><a href="history.php">History</a></li>
-							<li><a href="testimoni.php">Testimony</a></li>
+							<?php
+
+								 session_start();
+								    if(isset($_SESSION['loggedin']))
+								    {
+								     echo '
+								     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/history.php">History</a></li>
+								     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/testimoni2.php">Testimony</a></li>';
+								    echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Profil</a></li>';
+								    echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/logout.php">Logout</a></li>';
+								    }
+								    else
+								    {
+								    	echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/login.php">Login</a></li>';
+								   
+								    };
+
+								
+							?>
+							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/login.php">Login</a></li>
 						</ul>
 					</div>
 				</div>

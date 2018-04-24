@@ -1,3 +1,5 @@
+<?php require('koneksi.php'); ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -63,8 +65,26 @@
 							<li class="nav-item active"><a class="nav-link js-scroll-trigger" href="/ebuss/index.php">Home</a></li>
 							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/reservation.php">Reservation</a></li>
 							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/about.php">About</a></li>
-							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/history.php">History</a></li>
-							<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/testimoni.php">Testimony</a></li>
+							
+							<?php
+
+								 session_start();
+								    if(isset($_SESSION['loggedin']))
+								    {
+								     echo '
+								     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/history.php">History</a></li>
+								     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/testimoni2.php">Testimony</a></li>';
+								    echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Profil</a></li>';
+								    echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/logout.php">Logout</a></li>';
+								    }
+								    else
+								    {
+								    	echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/login.php">Login</a></li>';
+								   
+								    };
+
+								
+							?>
 						</ul>
 					</div>
 				</div>
@@ -289,11 +309,11 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Book a Table</h2>
+					<h2>Contact Us</h2>
 					<p>Making a reservation at Ups Normal Cafe & Restaurant is easy and takes just a couple of minutes.
 					All you have to do is input your name,input number of visitor and the date and time you require.
 					Please contact the restaurant directly as they may be able to assist. We look forward to welcoming you soon.</p>
-					<p><a href="reservation.php" class="btn btn-primary btn-outline">Book Now</a></p>
+					<p><a href="reservation.php" class="btn btn-primary btn-outline">Contact Us</a></p>
 				</div>
 			</div>
 		</div>

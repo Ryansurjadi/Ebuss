@@ -48,7 +48,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	<link rel="stylesheet" href="css/testimoni.css">
 
 	</head>
 	<body>
@@ -56,191 +56,87 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<!-- <div class="top-menu"> -->
+		<nav class="fh5co-nav" role="navigation">
+			<!-- <div class="top-menu"> -->
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 text-center logo-wrap">
+							<div id="fh5co-logo"><a href="index.html">Ups Normal<span>.</span></a></div>
+						</div>
+						<div class="col-xs-12 text-center menu-1 menu-wrap">
+							<ul>
+								<li><a href="home.php">Home</a></li>
+								<li><a href="reservation.php">Reservation</a></li>
+								<li><a href="about.php">About</a></li>
+								<li class="active"><a href="testimoni.php">Testimony</a></li>
+								<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/login.php">Login</a></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			<!-- </div> -->
+		</nav>
+		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">Ups Normal<span>.</span></a></div>
-					</div>
-					<div class="col-xs-12 text-center menu-1 menu-wrap">
-						<ul>
-							<li><a href="index.php">Home</a></li>
-							<li><a href="reservation.php">Reservation</a></li>
-							<li><a href="about.php">About</a></li>
-							<li><a href="history.php">History</a></li>
-							<li class="active"><a href="testimoni.php">Testimony</a></li>
-						</ul>
-					</div>
-				</div>
-				
-			</div>
-		<!-- </div> -->
-	</nav>
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>Reserved a Table Today!</h1>
-							<h2>Enjoy the true taste</h2>
+					<div class="col-md-12 text-center">
+						<div class="display-t js-fullheight">
+							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+								<h1>See Our Customer's Testimony</h1>
+								<h2>Enjoy the true taste</h2>
+							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</header>
+	
+		<!-- coding tampilan testimoni -->
+		<div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+		<div class="testimonial4_header">
+			<h4>what our clients are saying</h4>
+		</div>
+		<ol class="carousel-indicators">
+			<li data-target="#testimonial4" data-slide-to="0" class="active"></li>
+			<li data-target="#testimonial4" data-slide-to="1"></li>
+			<li data-target="#testimonial4" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<div class="testimonial4_slide">
+					<img src="http://via.placeholder.com/100x100" class="img-circle img-responsive" />
+					<p>Lorem ipsum dolor sit amet adipiscing elit am nibh unc varius facilisis eros ed erat in in velit quis arcu ornare laoreet urabitur.</p>
+					<h4>Ben Hanna</h4>
+				</div>
+			</div>
+			<div class="item">
+				<div class="testimonial4_slide">
+					<img src="http://via.placeholder.com/100x100" class="img-circle img-responsive" />
+					<p>Lorem ipsum dolor sit amet adipiscing elit am nibh unc varius facilisis eros ed erat in in velit quis arcu ornare laoreet urabitur.</p>
+					<h4>Ben Hanna</h4>
+				</div>
+			</div>
+			<div class="item">
+				<div class="testimonial4_slide">
+					<img src="http://via.placeholder.com/100x100" class="img-circle img-responsive" />
+					<p>Lorem ipsum dolor sit amet adipiscing elit am nibh unc varius facilisis eros ed erat in in velit quis arcu ornare laoreet urabitur.</p>
+					<h4>Ben Hanna</h4>
 				</div>
 			</div>
 		</div>
-	</header>
-	
-	<div id="fh5co-reservation-form" class="fh5co-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Reservation</h2>
-					<div class="row">
-						<div class="col-md-6">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
-						</div>
-					</div>
-				</div>
-				
-
-<div class="container">
-	<div class="row">
-		<div class="col-md-12 fh5co-heading animate-box">
-			<h2>List Table Reservation</h2>
-		<table class="points_table">
-			<thead>
-				<tr>
-					<th class="col-xs-3">Table Number</th>
-					<th class="col-xs-4">Chairs Amount</th>
-					<th class="col-xs-5">Status</th>
-				</tr>
-			</thead>
-
-			<tbody class="points_table_scrollbar">
-				<tr class="odd">
-					<td class="col-xs-3">1</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="even">
-					<td class="col-xs-3">2</td>
-					<td class="col-xs-4">2  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-				
-				<tr class="odd">
-					<td class="col-xs-3">3</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="even">
-					<td class="col-xs-3">4</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="odd">
-					<td class="col-xs-3">5</td>
-					<td class="col-xs-4">2  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="even">
-					<td class="col-xs-3">6</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="odd">
-					<td class="col-xs-3">7</td>
-					<td class="col-xs-4">6 persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="even">
-					<td class="col-xs-3">8</td>
-					<td class="col-xs-4">6  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="odd">
-					<td class="col-xs-3">9</td>
-					<td class="col-xs-4">2  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="even">
-					<td class="col-xs-3">10</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	</div>
-</div>
-
-		<div class="container">
-		<div class="col-md-12 fh5co-heading animate-box">
-			<h2>Reservation</h2>
-
-				<div class="col-md-12">
-					<form action="#" id="form-wrap">
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="name">Your Name</label>
-								<input type="text" class="form-control" id="name">
-							</div>
-						</div>
-						
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="many">Table number</label>
-								<select name="many" id="many" class="form-control custom_select">
-									<option value="#">1</option>
-									<option value="#">2</option>
-									<option value="#">3</option>
-									<option value="#">4</option>
-									<option value="#">5</option>
-									<option value="#">6</option>
-									<option value="#">7</option>
-									<option value="#">8</option>
-									<option value="#">9</option>
-									<option value="#">10</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="taskdatetime">Date / Time</label>
-								<input type="text" name="task-datetime" id="taskdatetime" class="form-control"/>
-							</div>
-						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
-							</div>
-						</div>
-
-					</form>
-				</div>
-				
-				
-			</div>
+		<a class="left carousel-control" href="#testimonial4" role="button" data-slide="prev">
+			<span class="fa fa-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#testimonial4" role="button" data-slide="next">
+			<span class="fa fa-chevron-right"></span>
+		</a>
 		</div>
-	</div>
+	</div>	
+				
+		
 
 	</div>
-</div>
-	
-	
 
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">

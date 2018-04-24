@@ -68,8 +68,21 @@
 							<li><a href="index.php">Home</a></li>
 							<li class="active"><a href="reservation.php">Reservation</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="history.php">History</a></li>
-							<li><a href="testimoni.php">Testimony</a></li>
+							<?php
+
+								 session_start();
+								    if(isset($_SESSION['loggedin']))
+								    {
+								     echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/testimoni2.php">Testimony</a></li>';
+								    echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Profil</a></li>';
+								    echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/logout.php">Logout</a></li>';
+								    }
+								    else
+								    {
+								    	echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/ebuss/login.php">Login</a></li>';
+								   
+								    };
+							?>
 						</ul>
 					</div>
 				</div>
@@ -84,8 +97,8 @@
 				<div class="col-md-12 text-center">
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>Reserved a Table Today!</h1>
-							<h2>Enjoy the true taste</h2>
+							<h1>Reservasi Meja Sekarang ! </h1>
+							<h2>Nikmati cita rasa makanan sesungguhnya</h2>
 						</div>
 					</div>
 				</div>
@@ -97,7 +110,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Reservation</h2>
+					<h2>Reservasi</h2>
 					<div class="row">
 						<div class="col-md-6">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
@@ -106,135 +119,144 @@
 				</div>
 				
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-12 fh5co-heading animate-box">
-			<h2>List Table Reservation</h2>
-		<table class="points_table">
-			<thead>
-				<tr>
-					<th class="col-xs-3">Table Number</th>
-					<th class="col-xs-4">Chairs Amount</th>
-					<th class="col-xs-5">Status</th>
-				</tr>
-			</thead>
+							<?php
+								 if(isset($_SESSION['loggedin']))
 
-			<tbody class="points_table_scrollbar">
-				<tr class="odd">
-					<td class="col-xs-3">1</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
+								    {
+					echo ' 
 
-				<tr class="even">
-					<td class="col-xs-3">2</td>
-					<td class="col-xs-4">2  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-				
-				<tr class="odd">
-					<td class="col-xs-3">3</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 fh5co-heading animate-box">
+									<h2>List Table Reservation</h2>
+								<table class="points_table">
+									<thead>
+										<tr>
+											<th class="col-xs-3">Table Number</th>
+											<th class="col-xs-4">Chairs Amount</th>
+											<th class="col-xs-5">Status</th>
+										</tr>
+									</thead>
 
-				<tr class="even">
-					<td class="col-xs-3">4</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
+									<tbody class="points_table_scrollbar">' ?>
+										<?php require('koneksi.php');
+													$query = "SELECT * FROM meja ORDER BY ID_meja ASC";
+													$result = mysqli_query($con,$query) or die(mysqli_error());
+												
+												if(mysqli_num_rows($result)==0 ){ ?>
+													<tr class = "odd">
+														<td class="col-xs-3"> <?php echo "Data tidak di temukan!"; ?> </td>
+													</tr>
+												
+												<?php }
+												else{
+													while($row = mysqli_fetch_array($result)){
+												
+													if ($row[0] %2 != 0){
+												?>
+														<tr class="odd">
+															<td class="col-xs-3"> <?php echo $row[0]; ?></td>
+															<td class="col-xs-4"> <?php echo $row[1] ; ?> orang </td>
+															<td class="col-xs-5"> <?php echo $row[2]; ?> </td>
+														</tr>
+														<?php
+													}
 
-				<tr class="odd">
-					<td class="col-xs-3">5</td>
-					<td class="col-xs-4">2  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
+													else
+														{ ?>
+														<tr class="even">
+															<td class="col-xs-3"> <?php echo $row[0]; ?></td>
+															<td class="col-xs-4"> <?php echo $row[1]; ?> orang </td>
+															<td class="col-xs-5"> <?php echo $row[2]; ?> </td>
+														</tr>
+													<?php }	}?>
 
-				<tr class="even">
-					<td class="col-xs-3">6</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
 
-				<tr class="odd">
-					<td class="col-xs-3">7</td>
-					<td class="col-xs-4">6 persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
 
-				<tr class="even">
-					<td class="col-xs-3">8</td>
-					<td class="col-xs-4">6  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="odd">
-					<td class="col-xs-3">9</td>
-					<td class="col-xs-4">2  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-
-				<tr class="even">
-					<td class="col-xs-3">10</td>
-					<td class="col-xs-4">4  persons</td>
-					<td class="col-xs-5">Available</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	</div>
-</div>
-
-		<div class="container">
-		<div class="col-md-12 fh5co-heading animate-box">
-			<h2>Reservation</h2>
-
-				<div class="col-md-12">
-					<form action="#" id="form-wrap">
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="name">Your Name</label>
-								<input type="text" class="form-control" id="name">
+										<?php
+										echo '
+									</tbody>
+								</table>
 							</div>
-						</div>
-						
-
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="many">Table number</label>
-								<select name="many" id="many" class="form-control custom_select">
-									<option value="#">1</option>
-									<option value="#">2</option>
-									<option value="#">3</option>
-									<option value="#">4</option>
-									<option value="#">5</option>
-									<option value="#">6</option>
-									<option value="#">7</option>
-									<option value="#">8</option>
-									<option value="#">9</option>
-									<option value="#">10</option>
-								</select>
 							</div>
 						</div>
 
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="taskdatetime">Date / Time</label>
-								<input type="text" name="task-datetime" id="taskdatetime" class="form-control"/>
-							</div>
-						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
-							</div>
-						</div>
+						<div class="container">
+								<div class="col-md-12 fh5co-heading animate-box">
+									<h2>Reservation</h2>
 
-					</form>
-				</div>
-				
-				
-			</div>
-		</div>
+										<div class="col-md-12">
+											<form action="#" id="form-wrap">
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="name">Your Name</label>
+														<input type="text" class="form-control" id="name">
+													</div>
+												</div>
+												
+
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="many">Table number</label>
+														<select name="many" id="many" class="form-control custom_select">
+															<option value="#">1</option>
+															<option value="#">2</option>
+															<option value="#">3</option>
+															<option value="#">4</option>
+															<option value="#">5</option>
+															<option value="#">6</option>
+															<option value="#">7</option>
+															<option value="#">8</option>
+															<option value="#">9</option>
+															<option value="#">10</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="taskdatetime">Date / Time</label>
+														<input type="text" name="task-datetime" id="taskdatetime" class="form-control"/>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
+													</div>
+												</div>
+
+											</form>
+										</div>
+										
+										
+									</div>
+							</div>';
+
+								    }}
+								    else
+								    {
+								    	echo '
+								    	
+								
+								<div class="box" >
+									<div class="row animate-box fadeInUp animated-fast">
+										<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+											<h2>Contact Us</h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
+											<p><a href="mailto:info@yourdomainname.com" class="btn btn-primary btn-outline">Contact Us</a></p>
+										</div>
+									</div>
+								</div>
+							</div>';
+								   
+								    };
+							?>
+
+
+
+
+
+		
 	</div>
 
 	</div>
